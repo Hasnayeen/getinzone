@@ -2,6 +2,7 @@
   "name": "getinzone",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://hasnayeen.github.io/getinzone",
   "dependencies": {
     "luxon": "^1.0.0",
     "react": "^16.3.1",
@@ -14,7 +15,7 @@
     "watch:css": "postcss src/style.css -o src/index.css -w",
     "start": "npm run watch:css & NODE_PATH=src react-scripts start",
     "build": "npm run build:css && react-scripts build",
-    "postbuild": "cp -r build docs",
+    "postbuild": "cp -R build docs",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
