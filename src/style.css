@@ -1,0 +1,13 @@
+@tailwind preflight;
+
+@tailwind components;
+
+.btn {
+    @apply bg-white p-4 mx-4 rounded border border-grey font-semibold text-grey-dark;
+}
+
+.btn-brand {
+    @apply text-white bg-brand border-none;
+}
+
+@tailwind utilities;
