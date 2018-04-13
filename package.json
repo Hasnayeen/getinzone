@@ -15,7 +15,7 @@
     "watch:css": "postcss src/style.css -o src/index.css -w",
     "start": "npm run watch:css & NODE_PATH=src react-scripts start",
     "build": "npm run build:css && react-scripts build",
-    "postbuild": "cp -R build docs",
+    "postbuild": "rm -R docs/static/ && cp -R build/* docs",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

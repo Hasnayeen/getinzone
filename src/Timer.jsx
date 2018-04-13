@@ -123,11 +123,11 @@ export default class Timer extends Component {
     }
 
     workTime() {
-        return Duration.fromObject({ seconds: this.state.defaultTime }).shiftTo('hours', 'minutes', 'seconds').toFormat("h 'h :' mm 'm :' ss 's'");
+        return Duration.fromObject({ seconds: this.state.defaultTime }).shiftTo('hours', 'minutes', 'seconds').toFormat("hh 'H :' mm 'M :' ss 'S'");
     }
 
     breakTime() {
-        return Duration.fromObject({ seconds: this.state.breakTime }).shiftTo('hours', 'minutes', 'seconds').toFormat("h 'h :' mm 'm :' ss 's'");
+        return Duration.fromObject({ seconds: this.state.breakTime }).shiftTo('hours', 'minutes', 'seconds').toFormat("hh 'H :' mm 'M :' ss 'S'");
     }
 
     configure() {
@@ -197,7 +197,7 @@ export default class Timer extends Component {
                 </div>
                 <div className="border-t w-full my-4"></div>
                 <div className="p-4">
-                    <span className="block py-2 text-grey-dark">Total Time : {this.totalTime().hours}H {this.totalTime().minutes.toFixed(2)}M</span>
+                    <span className="block py-2 text-grey-dark">Total Time : {this.totalTime().hours}H {this.totalTime().minutes.toFixed(0)}M</span>
                     <span className="block py-2 text-grey-dark">Completed Unit : {this.state.totalUnit}</span>
                 </div>
             </div>
