@@ -4,9 +4,12 @@
   "private": true,
   "homepage": "http://hasnayeen.github.io/getinzone",
   "dependencies": {
+    "aws-amplify": "^1.0.2",
+    "aws-amplify-react": "^1.0.2",
     "luxon": "^1.0.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "tailwindcss": "^0.5.2"
   },
