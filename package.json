@@ -4,11 +4,11 @@
   "private": true,
   "homepage": "http://hasnayeen.github.io/getinzone",
   "dependencies": {
-    "luxon": "^1.0.0",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
+    "luxon": "^1.9.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "react-scripts": "1.1.4",
-    "tailwindcss": "^0.5.2"
+    "tailwindcss": "^0.5.3"
   },
   "scripts": {
     "build:css": "postcss src/style.css -o src/index.css",
