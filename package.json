@@ -4,11 +4,13 @@
   "private": true,
   "homepage": "http://hasnayeen.github.io/getinzone",
   "dependencies": {
-    "luxon": "^1.9.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-scripts": "1.1.4",
-    "tailwindcss": "^0.5.3"
+    "luxon": "^1.11.2",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-redux": "^6.0.0",
+    "react-scripts": "^2.1.3",
+    "redux": "^4.0.1",
+    "tailwindcss": "^0.7.3"
   },
   "scripts": {
     "build:css": "postcss src/style.css -o src/index.css",
@@ -18,5 +20,14 @@
     "postbuild": "rm -R docs/static/ && cp -R build/* docs",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "redux-devtools": "^3.5.0"
   }
 }
