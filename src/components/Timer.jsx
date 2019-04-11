@@ -33,22 +33,24 @@ class Timer extends Component {
     this.configure = this.configure.bind(this)
   }
 
-  startTimer () {
-    this.stopSound()
-    if (this.props.timerRunning === false) {
-      this.props.dispatch({ type: 'START_TIMER' })
-    }
-  }
-
-  decreaseTime () {
-    this.props.dispatch({ type: 'DECREASE_TIME', time: this.props.time })
-    if (this.props.time === 0) {
+  componentDidUpdate (prevProps) {
+    if (this.props.time !== prevProps.time && this.props.time === 0) {
       if (!this.props.breakRunning) {
         this.setState({ totalTime: parseInt(this.state.totalTime, 10) + parseInt(this.props.defaultTime, 10) })
         this.setState({ totalUnit: this.state.totalUnit + 1 })
       }
       this.playSound()
-    };
+    }
+    if (this.props.time !== prevProps.time && this.props.time === this.props.defaultTime) {
+      this.stopSound()
+    }
+  }
+
+  startTimer () {
+    this.stopSound()
+    if (this.props.timerRunning === false) {
+      this.props.dispatch({ type: 'START_TIMER' })
+    }
   }
 
   activateBreak () {

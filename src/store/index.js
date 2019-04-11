@@ -2,11 +2,11 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import startTimer from './../reducers'
 
 const state = {
-  currentComponent: 'woop',
+  currentComponent: 'timer',
   time: 600,
   defaultTime: 600,
   timerRunning: false,
-  breakTime: 120,
+  breakTime: 2,
   breakRunning: false,
   timerId: null,
   dropdownShown: false
